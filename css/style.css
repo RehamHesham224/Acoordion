@@ -1,0 +1,303 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+body{
+font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image:linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+.container {
+    max-width: 1140px;
+}
+}
+
+/* *********** start ************ */
+.main{
+    display: flex;
+    background-color: #fff;
+    border-radius:1rem ;
+    -webkit-border-radius:1rem ;
+    -moz-border-radius:1rem ;
+    -ms-border-radius:1rem ;
+    -o-border-radius:1rem ;
+    max-width:80% ;
+    margin: 0 auto;
+    min-height: 80vh;
+    
+}
+
+ @media (max-width: 767.98px) {  
+    .main{
+    width:100% ;
+    max-width: 100%;
+    flex-direction: column;
+    margin: 35% 0 25%!important;
+    transform: translate(5.5%);
+    -webkit-transform: translate(5.5%);
+    -moz-transform: translate(5.5%);
+    -ms-transform: translate(5.5%);
+    -o-transform: translate(5.5%);
+}
+ }
+ @media (max-width: 991.98px) { 
+    .main{
+    max-width:90% ;
+    
+    }
+ }
+/* *********** main-image ************ */
+.main__image{
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.main__image > img{
+    position: relative;
+    left: -30%;
+    width: 110%;
+    height: 100%;
+    
+}
+
+.main__image .main__image-img img{
+    position: absolute;
+    top:0%;
+    left:0;
+    z-index: 2;
+    width: 100%;
+    margin-top: 15%;
+    height: 70%;
+    transform: translateX(-4rem);
+    -webkit-transform: translateX(-4rem);
+    -moz-transform: translateX(-4rem);
+    -ms-transform: translateX(-4rem);
+    -o-transform: translateX(-4rem);
+}
+
+@media (max-width: 767.98px) {  
+    .main__image{
+        width: 100%;
+        overflow: visible;
+    }
+    .main__image > img{
+    width: 72%;
+    height: 20%;
+    left: 55%;
+    /* top:-20%; */
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+    .main__image .main__image-img img{
+        margin-top: 0%;
+        height:70%;
+        width: 80%;
+        left: 20%;
+        top:-35%;
+        transform:translateX(-50%)    ;
+        -webkit-transform:translateX(-50%)    ;
+        -moz-transform:translateX(-50%)    ;
+        -ms-transform:translateX(-50%)    ;
+        -o-transform:translateX(-50%)    ;
+}
+    .img-desktop{
+    display: none;
+    }
+    .img-mobile{
+    display: block;
+    }
+}
+@media (min-width: 768px) {
+    .img-desktop{
+        display:block;
+        }
+        .img-mobile{
+        display: none;
+        }
+
+}
+@media (max-width: 991.98px) {  
+    .main__image .main__image-img img{
+    transform: translateX(-2.5rem);
+    -webkit-transform: translateX(-2.5rem);
+    -moz-transform: translateX(-2.5rem);
+    -ms-transform: translateX(-2.5rem);
+    -o-transform: translateX(-2.5rem);
+}
+}
+/* ********main-accordion************ */
+.main__accordion{
+width: 50%;
+display: flex;
+align-items: center;
+}
+
+.accordion__main-title{
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color:#333;
+}
+.accordion{
+
+justify-content: center;
+align-items: center;
+padding: 1rem;
+}
+.accordion__box{
+    padding-bottom: 1rem;
+border-bottom: 1px solid #eee;
+}
+@media (max-width: 767.98px) {  
+    .main__accordion{
+        width: 100%;
+        margin-top: -30%;
+    }
+    .accordion__main-title{
+        text-align: center;
+    }
+}
+/* ********accordion__title************ */
+.accordion__title{
+display: flex;
+justify-content: space-between;
+margin: 1rem 0 0; 
+cursor: pointer;
+width: 100%;
+}
+.accordion__title h2{
+    color:hsl(237, 12%, 33%);
+    font-size: 1rem;
+    font-weight: normal;
+    
+}
+.accordion__title:hover h2,
+.accordion__box.active .accordion__title:hover h2{
+    color:hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+.accordion__title img{
+    margin-left: 2rem;
+    
+    width: 12px;
+    height: 12px;
+    margin-right: 2rem;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+/* ********accordion__content************ */
+.accordion__content{
+    display: none;
+    transition:0.5s ;
+    -webkit-transition:0.5s ;
+    -moz-transition:0.5s ;
+    -ms-transition:0.5s ;
+    -o-transition:0.5s ;
+}
+.accordion__content p{
+font-size: 0.8rem;
+color:hsl(240, 6%, 50%);
+line-height: 1.6;
+margin-top: 1rem;
+}
+/* ********active************ */
+.accordion__box.active .accordion__title h2{
+    font-weight: bold;
+}
+.accordion__box.active .accordion__content{
+    display: block;
+}
+.accordion__box.active .accordion__title img{
+
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+/***box***/
+.box{
+    position: absolute;
+    z-index: 3;
+    top:39%;
+    left: 0%;
+}
+@media (max-width: 767.98px) {
+    .box{
+        display: none;
+    }
+}
+
+@media (max-width: 1199.98px) {  
+    .box{
+        left:-2%;
+        top:38%;
+    }
+
+}
+@media (max-width: 991.98px) {  
+    .box{
+    top:34.5%;
+    left: -11%;
+    }
+}
+
+
+
+ /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {  }
+ /* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {  }
+
+ /* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {  }
+
+ /* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {  }
+
+
+
+/* background-image: url(../images/bg-pattern-desktop.svg);
+    background-size: 100% 150%;
+    background-repeat: no-repeat;
+    background-position: -90% 50%; */
